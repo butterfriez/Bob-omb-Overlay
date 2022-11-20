@@ -38,6 +38,14 @@ class MainGui :
             }.onMouseClick {
                 BombOmb.currentGui = Config.gui()
             }
+            SimpleButton("Edit Overlay").childOf(window).constrain {
+                x = CenterConstraint()
+                y = SiblingConstraint() + 2.pixels()
+                width = 200.pixels()
+                height = 20.pixels()
+            }.onMouseClick {
+                BombOmb.currentGui = EditGui()
+            }
             animate()
         }
 

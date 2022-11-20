@@ -1,15 +1,17 @@
 package com.butter.config
 
+import kotlinx.serialization.Contextual
 import kotlinx.serialization.Serializable
 import kotlinx.serialization.json.Json
 import java.io.File
 import kotlinx.serialization.encodeToString
 import kotlinx.serialization.decodeFromString
+import java.awt.Color
 
 @Serializable
 data class PersistentData(
-    var exampleData: Map<String, String> = mapOf("key1" to "entry1"),
-    var moreExampleData: Int = 5
+    @Contextual
+    val BlockColor: Color = Color.BLUE
 ) {
 
     fun save() {
