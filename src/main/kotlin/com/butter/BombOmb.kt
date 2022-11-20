@@ -14,8 +14,8 @@ import net.minecraftforge.fml.common.gameevent.TickEvent
 import java.io.File
 
 @Mod(
-    modid = "examplemod",
-    name = "ExampleMod",
+    modid = "bobomb",
+    name = "Bob-Omb Overlay",
     version = "1.0",
     useMetadata = true,
     clientSideOnly = true

@@ -31,7 +31,7 @@ loom {
             property("mixin.debug", "true")
             property("asmhelper.verbose", "true")
             arg("--tweakClass", "org.spongepowered.asm.launch.MixinTweaker")
-            arg("--mixin", "mixins.butters.json")
+            arg("--mixin", "mixins.butter.json")
             //Essentials setup for dev-environment.
             arg("--tweakClass", "gg.essential.loader.stage0.EssentialSetupTweaker")
         }
