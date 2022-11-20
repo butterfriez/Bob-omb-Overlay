@@ -1,4 +1,4 @@
-import com.butter.commands.ExampleCommand
+import com.butter.commands.MainCommand
 import com.butter.config.Config
 import com.butter.config.PersistentData
 import net.minecraft.client.Minecraft
@@ -34,7 +34,7 @@ class BombOmb {
 
     @Mod.EventHandler
     fun onInit(event: FMLInitializationEvent) {
-        ClientCommandHandler.instance.registerCommand(ExampleCommand())
+        ClientCommandHandler.instance.registerCommand(MainCommand())
 
         listOf(
             this

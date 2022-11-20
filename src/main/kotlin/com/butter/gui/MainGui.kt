@@ -16,7 +16,6 @@ import gg.essential.elementa.constraints.RelativeConstraint
 import gg.essential.elementa.constraints.SiblingConstraint
 import gg.essential.elementa.constraints.animation.Animations
 import gg.essential.elementa.dsl.*
-import gg.essential.universal.UKeyboard
 import net.minecraft.client.Minecraft
 
 
@@ -24,10 +23,10 @@ class MainGui :
     WindowScreen(ElementaVersion.V1, newGuiScale = EssentialAPI.getGuiUtil().getGuiScale())
     {
         private val bobOmbText: UIText =
-            UIText("Bob-Omb Overlay", shadow = false).childOf(window).constrain {
+            UIText("Bob-Omb", shadow = false).childOf(window).constrain {
                 x = CenterConstraint()
                 y = RelativeConstraint(0.075f)
-                textScale = basicTextScaleConstraint { window.getHeight() / 40 }
+                textScale = basicTextScaleConstraint { window.getHeight() / 50 }
             }
 
         init {
@@ -39,6 +38,7 @@ class MainGui :
             }.onMouseClick {
                 BombOmb.currentGui = Config.gui()
             }
+            animate()
         }
 
         private fun animate() {
