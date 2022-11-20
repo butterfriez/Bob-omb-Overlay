@@ -32,6 +32,8 @@ loom {
             property("asmhelper.verbose", "true")
             arg("--tweakClass", "org.spongepowered.asm.launch.MixinTweaker")
             arg("--mixin", "mixins.examplemods.json")
+            //Essentials setup for dev-environment.
+            arg("--tweakClass", "gg.essential.loader.stage0.EssentialSetupTweaker")
         }
     }
     forge {
