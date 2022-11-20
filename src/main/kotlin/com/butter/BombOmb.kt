@@ -1,6 +1,6 @@
-import com.examplemod.commands.ExampleCommand
-import com.examplemod.config.Config
-import com.examplemod.config.PersistentData
+import com.butter.commands.ExampleCommand
+import com.butter.config.Config
+import com.butter.config.PersistentData
 import net.minecraft.client.Minecraft
 import net.minecraft.client.gui.GuiScreen
 import net.minecraftforge.client.ClientCommandHandler
@@ -20,7 +20,7 @@ import java.io.File
     useMetadata = true,
     clientSideOnly = true
 )
-class ExampleMod {
+class BombOmb {
 
     @Mod.EventHandler
     fun preInit(event: FMLPreInitializationEvent) {

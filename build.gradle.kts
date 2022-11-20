@@ -12,7 +12,7 @@ plugins {
     id("com.github.johnrengelman.shadow") version "7.1.2"
 }
 
-group = "ExampleMod"
+group = "butter"
 version = "1.0"
 
 java {
@@ -31,17 +31,17 @@ loom {
             property("mixin.debug", "true")
             property("asmhelper.verbose", "true")
             arg("--tweakClass", "org.spongepowered.asm.launch.MixinTweaker")
-            arg("--mixin", "mixins.examplemods.json")
+            arg("--mixin", "mixins.butters.json")
             //Essentials setup for dev-environment.
             arg("--tweakClass", "gg.essential.loader.stage0.EssentialSetupTweaker")
         }
     }
     forge {
         pack200Provider.set(dev.architectury.pack200.java.Pack200Adapter())
-        mixinConfig("mixins.examplemod.json")
+        mixinConfig("mixins.butter.json")
     }
     mixin {
-        defaultRefmapName.set("mixins.examplemod.refmap.json")
+        defaultRefmapName.set("mixins.butter.refmap.json")
     }
 }
 
@@ -61,7 +61,7 @@ val shadowImpl: Configuration by configurations.creating {
 
 dependencies {
     // For serialization: remove if not needed
-    implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.4.0")
+    implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.4.1")
 
     minecraft("com.mojang:minecraft:1.8.9")
     mappings("de.oceanlabs.mcp:mcp_stable:22-1.8.9")
@@ -98,7 +98,7 @@ tasks.withType(Jar::class) {
         this["FMLCorePluginContainsFMLMod"] = "true"
         this["ForceLoadAsMod"] = "true"
 
-        this["MixinConfigs"] = "mixins.examplemod.json"
+        this["MixinConfigs"] = "mixins.butter.json"
 
         this["TweakClass"] = "gg.essential.loader.stage0.EssentialSetupTweaker"
         this["TweakOrder"] = "0"

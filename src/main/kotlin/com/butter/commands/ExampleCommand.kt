@@ -1,12 +1,10 @@
-package com.examplemod.commands
+package com.butter.commands
 
-import ExampleMod
-import com.examplemod.config.Config
+import BombOmb
+import com.butter.config.Config
 import net.minecraft.command.CommandBase
 import net.minecraft.command.ICommandSender
 import net.minecraft.util.ChatComponentText
-import net.minecraft.util.IChatComponent
-
 class ExampleCommand : CommandBase() {
     override fun getCommandName() = "examplemod"
 
@@ -18,6 +16,6 @@ class ExampleCommand : CommandBase() {
 
     override fun processCommand(sender: ICommandSender?, args: Array<out String>?) {
         sender?.addChatMessage(ChatComponentText("Example command run!"))
-        ExampleMod.currentGui = Config.gui()
+        BombOmb.currentGui = Config.gui()
     }
 }
