@@ -21,7 +21,7 @@ class EditGui : WindowScreen(ElementaVersion.V1, newGuiScale = EssentialAPI.getG
             textScale = basicTextScaleConstraint { window.getHeight() / 90 }
         }
     init {
-        SimpleSlider().childOf(window).constrain {
+        SimpleSlider(defaultI = 5).childOf(window).constrain {
             x = CenterConstraint()
             y = SiblingConstraint() + RelativeConstraint(0.075f)
             width = 200.pixels()
